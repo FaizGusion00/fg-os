@@ -43,12 +43,19 @@ set(KERNEL_SOURCES
     hal/hal.c
     hal/x86_64_hal.c
     
+    # Phase 10-11: File system implementation
+    fs/fs.c
+    fs/fgfs.c
+    fs/fat32.c
+    fs/ext4.c
+    
     # Phase 5: Architecture stubs
     arch/x86_64/arch_stubs.c
     
     # Additional files will be added in later phases:
-    # Phase 10: File system (fs/*)
-    # Phase 11: Inter-process communication (ipc/*)
+    # Phase 12: GUI Framework (gui/*)
+    # Phase 13: GUI Implementation (gui/*)
+    # Phase 15: IPC (ipc/*)
 )
 
 # Phase 3: Essential kernel headers only
@@ -74,6 +81,12 @@ add_executable(${KERNEL_NAME} ${KERNEL_SOURCES})
 
 # Create Phase 9 demonstration executable
 add_executable(phase9-demo src/test_main.c)
+
+# Create Phase 10 demonstration executable
+add_executable(phase10-demo src/test_main.c)
+
+# Create Phase 11 demonstration executable
+add_executable(phase11-demo src/test_main.c)
 
 # Set kernel properties (Phase 3: Simplified for Windows build)
 set_target_properties(${KERNEL_NAME} PROPERTIES
@@ -111,6 +124,32 @@ elseif(CURRENT_PHASE EQUAL 9)
     add_custom_target(phase9-test
         DEPENDS phase9-demo
         COMMENT "Phase 9: Hardware Abstraction Layer demonstration ready"
+    )
+elseif(CURRENT_PHASE EQUAL 10)
+    message(STATUS "Building Phase 10 kernel components...")
+    
+    # Create File System Design kernel for Phase 10
+    add_custom_target(phase10-kernel
+        DEPENDS ${KERNEL_NAME}
+        COMMENT "Phase 10: File System Design ready"
+    )
+    
+    add_custom_target(phase10-test
+        DEPENDS phase10-demo
+        COMMENT "Phase 10: File System Design demonstration ready"
+    )
+elseif(CURRENT_PHASE EQUAL 11)
+    message(STATUS "Building Phase 11 kernel components...")
+    
+    # Create File System Implementation kernel for Phase 11
+    add_custom_target(phase11-kernel
+        DEPENDS ${KERNEL_NAME}
+        COMMENT "Phase 11: File System Implementation ready"
+    )
+    
+    add_custom_target(phase11-test
+        DEPENDS phase11-demo
+        COMMENT "Phase 11: File System Implementation demonstration ready"
     )
 endif()
 

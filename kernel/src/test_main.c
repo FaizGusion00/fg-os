@@ -16,6 +16,8 @@
 
 // External test function declarations
 extern void test_phase9(void);
+extern void test_phase10(void);
+extern void test_phase11(void);
 
 /**
  * @brief Clear the console screen
@@ -32,11 +34,20 @@ void clear_screen(void) {
  * current kernel configuration.
  */
 int main(void) {
-    // Initialize basic console output
-    printf("Starting FG-OS Phase 9 Hardware Abstraction Layer Test...\n\n");
-    
-    // Run Phase 9 HAL demonstration
-    test_phase9();
+    // Determine which phase test to run
+    if (CURRENT_PHASE == 9) {
+        printf("Starting FG-OS Phase 9 Hardware Abstraction Layer Test...\n\n");
+        test_phase9();
+    } else if (CURRENT_PHASE == 10) {
+        printf("Starting FG-OS Phase 10 File System Design Test...\n\n");
+        test_phase10();
+    } else if (CURRENT_PHASE == 11) {
+        printf("Starting FG-OS Phase 11 File System Implementation Test...\n\n");
+        test_phase11();
+    } else {
+        printf("FG-OS Phase %d Test - Not yet implemented\n", CURRENT_PHASE);
+        printf("Available tests: Phase 9, 10, 11\n");
+    }
     
     return 0;
 } 
