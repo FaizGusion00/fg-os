@@ -18,6 +18,8 @@
 #include "../mm/memory.h"
 #include "../sched/scheduler.h"
 #include "../interrupt/interrupt.h"
+#include "../drivers/device.h"
+#include "../hal/hal.h"
 
 // Forward declarations
 void kernel_start(struct boot_info *boot_info);
@@ -195,8 +197,25 @@ static int init_subsystems(void) {
     }
     
     KINFO("  → Interrupt system: OK");
-    KINFO("  → Device drivers: Deferred to Phase 8");
-    KINFO("  → File system: Deferred to Phase 11");
+    
+    // Phase 8: Initialize device framework
+    KINFO("  → Initializing Device Framework...");
+    if (device_init() != 0) {
+        KERROR("Failed to initialize Device Framework");
+        return KERN_ERROR;
+    }
+    
+    KINFO("  → Device framework: OK");
+    
+    // Phase 9: Initialize Hardware Abstraction Layer
+    KINFO("  → Initializing Hardware Abstraction Layer...");
+    if (hal_initialize() != 0) {
+        KERROR("Failed to initialize Hardware Abstraction Layer");
+        return KERN_ERROR;
+    }
+    
+    KINFO("  → Hardware Abstraction Layer: OK");
+    KINFO("  → File system: Deferred to Phase 10");
     KINFO("  → Graphics subsystem: Deferred to Phase 13");
     
     return KERN_SUCCESS;

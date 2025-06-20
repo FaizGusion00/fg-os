@@ -25,9 +25,9 @@
 #define KERNEL_COPYRIGHT    "© 2024 FGCompany Official. All rights reserved."
 
 // Development phase tracking
-#define CURRENT_PHASE       7
+#define CURRENT_PHASE       9
 #define TOTAL_PHASES        20
-#define PHASE_NAME          "Interrupt Handling System"
+#define PHASE_NAME          "Hardware Abstraction Layer (HAL)"
 
 // Kernel configuration
 #define KERNEL_STACK_SIZE   0x4000          // 16KB kernel stack

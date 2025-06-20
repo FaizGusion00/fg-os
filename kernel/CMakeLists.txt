@@ -11,7 +11,7 @@ set(KERNEL_VERSION "1.0.0")
 set(CMAKE_C_FLAGS "${KERNEL_CFLAGS}")
 set(CMAKE_CXX_FLAGS "${KERNEL_CFLAGS}")
 
-# Phase 7: Interrupt Handling System
+# Phase 9: Hardware Abstraction Layer (HAL)
 set(KERNEL_SOURCES
     # Core kernel files
     src/main.c
@@ -35,13 +35,20 @@ set(KERNEL_SOURCES
     interrupt/idt.c
     interrupt/interrupt.c
     
+    # Phase 8: Device drivers implementation
+    drivers/device.c
+    drivers/bus/pci.c
+    
+    # Phase 9: Hardware Abstraction Layer implementation
+    hal/hal.c
+    hal/x86_64_hal.c
+    
     # Phase 5: Architecture stubs
     arch/x86_64/arch_stubs.c
     
     # Additional files will be added in later phases:
-    # Phase 8: Device drivers (drivers/*)
-    # Phase 9: File system (fs/*)
-    # Phase 10: Inter-process communication (ipc/*)
+    # Phase 10: File system (fs/*)
+    # Phase 11: Inter-process communication (ipc/*)
 )
 
 # Phase 3: Essential kernel headers only
@@ -65,8 +72,8 @@ include_directories(
 # Create kernel executable
 add_executable(${KERNEL_NAME} ${KERNEL_SOURCES})
 
-# Create Phase 7 demonstration executable
-add_executable(phase7-demo src/test_main.c)
+# Create Phase 9 demonstration executable
+add_executable(phase9-demo src/test_main.c)
 
 # Set kernel properties (Phase 3: Simplified for Windows build)
 set_target_properties(${KERNEL_NAME} PROPERTIES
@@ -92,18 +99,18 @@ if(CURRENT_PHASE EQUAL 1)
         DEPENDS ${KERNEL_NAME}
         COMMENT "Phase 1: Basic kernel structure ready"
     )
-elseif(CURRENT_PHASE EQUAL 7)
-    message(STATUS "Building Phase 7 kernel components...")
+elseif(CURRENT_PHASE EQUAL 9)
+    message(STATUS "Building Phase 9 kernel components...")
     
-    # Create interrupt handling kernel for Phase 7
-    add_custom_target(phase7-kernel
+    # Create HAL kernel for Phase 9
+    add_custom_target(phase9-kernel
         DEPENDS ${KERNEL_NAME}
-        COMMENT "Phase 7: Interrupt handling system ready"
+        COMMENT "Phase 9: Hardware Abstraction Layer ready"
     )
     
-    add_custom_target(phase7-test
-        DEPENDS phase7-demo
-        COMMENT "Phase 7: Interrupt handling demonstration ready"
+    add_custom_target(phase9-test
+        DEPENDS phase9-demo
+        COMMENT "Phase 9: Hardware Abstraction Layer demonstration ready"
     )
 endif()
 
