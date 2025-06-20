@@ -1,0 +1,13 @@
+# Hashes of file build rules.
+50d926d1fbc5ffd8fbb57929c514bfe5 CMakeFiles/clean-all
+9edfde92c072aba8453a73db0bec93b9 CMakeFiles/debug-qemu
+d626b82763cdef9f2f0af15a0a55a667 CMakeFiles/fgos-iso
+d6d1ac8ef5b9786b66e0b2e7479ebc56 CMakeFiles/run-qemu
+7add1997fb48617d5405fa19305fbbdf boot/CMakeFiles/bootable-iso
+b06a9b3773a23e44556abc68f26116b8 boot/CMakeFiles/bootloader
+819b4754c3bb53d9df8a0947af492cd5 boot/CMakeFiles/debug-boot
+a33aad5b804485d135a8b67122426228 boot/CMakeFiles/grub-config
+eec4c6b10523e19984e66f7398194560 boot/CMakeFiles/install-bootloader
+211721047459aa573a020ff570ba61aa boot/CMakeFiles/iso
+980411787700b238ca3c84847a8156d4 boot/CMakeFiles/phase3-validation
+819b4754c3bb53d9df8a0947af492cd5 boot/CMakeFiles/test-boot

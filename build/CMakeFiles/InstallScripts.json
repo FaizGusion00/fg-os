@@ -1,0 +1,12 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Development/fg-os/build/cmake_install.cmake",
+		"C:/Development/fg-os/build/boot/cmake_install.cmake",
+		"C:/Development/fg-os/build/kernel/cmake_install.cmake",
+		"C:/Development/fg-os/build/graphics/cmake_install.cmake",
+		"C:/Development/fg-os/build/libs/cmake_install.cmake",
+		"C:/Development/fg-os/build/tools/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

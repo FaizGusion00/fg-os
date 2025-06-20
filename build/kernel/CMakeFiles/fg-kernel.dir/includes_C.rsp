@@ -1,0 +1,1 @@
+-I"C:/Development/fg-os/include" -I"C:/Development/fg-os/kernel/include" -I"C:/Development/fg-os/libs/include" -I"C:/Development/fg-os/kernel/arch/x86_64/include"

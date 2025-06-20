@@ -1,0 +1,62 @@
+[
+{
+  "directory": "C:/Development/fg-os/build/kernel",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/fg-kernel.dir/includes_C.rsp -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -std=gnu17 -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -o CMakeFiles\\fg-kernel.dir\\src\\main.c.obj -c C:\\Development\\fg-os\\kernel\\src\\main.c",
+  "file": "C:/Development/fg-os/kernel/src/main.c",
+  "output": "kernel/CMakeFiles/fg-kernel.dir/src/main.c.obj"
+},
+{
+  "directory": "C:/Development/fg-os/build/kernel",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/fg-kernel.dir/includes_C.rsp -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -std=gnu17 -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -o CMakeFiles\\fg-kernel.dir\\src\\boot.c.obj -c C:\\Development\\fg-os\\kernel\\src\\boot.c",
+  "file": "C:/Development/fg-os/kernel/src/boot.c",
+  "output": "kernel/CMakeFiles/fg-kernel.dir/src/boot.c.obj"
+},
+{
+  "directory": "C:/Development/fg-os/build/kernel",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/fg-kernel.dir/includes_C.rsp -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -std=gnu17 -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -o CMakeFiles\\fg-kernel.dir\\src\\panic.c.obj -c C:\\Development\\fg-os\\kernel\\src\\panic.c",
+  "file": "C:/Development/fg-os/kernel/src/panic.c",
+  "output": "kernel/CMakeFiles/fg-kernel.dir/src/panic.c.obj"
+},
+{
+  "directory": "C:/Development/fg-os/build/kernel",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/fg-kernel.dir/includes_C.rsp -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -std=gnu17 -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -o CMakeFiles\\fg-kernel.dir\\src\\console_stub.c.obj -c C:\\Development\\fg-os\\kernel\\src\\console_stub.c",
+  "file": "C:/Development/fg-os/kernel/src/console_stub.c",
+  "output": "kernel/CMakeFiles/fg-kernel.dir/src/console_stub.c.obj"
+},
+{
+  "directory": "C:/Development/fg-os/build/kernel",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/fg-kernel.dir/includes_C.rsp -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -std=gnu17 -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -o CMakeFiles\\fg-kernel.dir\\mm\\pmm.c.obj -c C:\\Development\\fg-os\\kernel\\mm\\pmm.c",
+  "file": "C:/Development/fg-os/kernel/mm/pmm.c",
+  "output": "kernel/CMakeFiles/fg-kernel.dir/mm/pmm.c.obj"
+},
+{
+  "directory": "C:/Development/fg-os/build/kernel",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/fg-kernel.dir/includes_C.rsp -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -std=gnu17 -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -o CMakeFiles\\fg-kernel.dir\\mm\\vmm.c.obj -c C:\\Development\\fg-os\\kernel\\mm\\vmm.c",
+  "file": "C:/Development/fg-os/kernel/mm/vmm.c",
+  "output": "kernel/CMakeFiles/fg-kernel.dir/mm/vmm.c.obj"
+},
+{
+  "directory": "C:/Development/fg-os/build/kernel",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/fg-kernel.dir/includes_C.rsp -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -std=gnu17 -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -o CMakeFiles\\fg-kernel.dir\\mm\\heap.c.obj -c C:\\Development\\fg-os\\kernel\\mm\\heap.c",
+  "file": "C:/Development/fg-os/kernel/mm/heap.c",
+  "output": "kernel/CMakeFiles/fg-kernel.dir/mm/heap.c.obj"
+},
+{
+  "directory": "C:/Development/fg-os/build/kernel",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/fg-kernel.dir/includes_C.rsp -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -std=gnu17 -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -o CMakeFiles\\fg-kernel.dir\\mm\\memory_utils.c.obj -c C:\\Development\\fg-os\\kernel\\mm\\memory_utils.c",
+  "file": "C:/Development/fg-os/kernel/mm/memory_utils.c",
+  "output": "kernel/CMakeFiles/fg-kernel.dir/mm/memory_utils.c.obj"
+},
+{
+  "directory": "C:/Development/fg-os/build/kernel",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/fg-kernel.dir/includes_C.rsp -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -std=gnu17 -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -o CMakeFiles\\fg-kernel.dir\\arch\\x86_64\\arch_stubs.c.obj -c C:\\Development\\fg-os\\kernel\\arch\\x86_64\\arch_stubs.c",
+  "file": "C:/Development/fg-os/kernel/arch/x86_64/arch_stubs.c",
+  "output": "kernel/CMakeFiles/fg-kernel.dir/arch/x86_64/arch_stubs.c.obj"
+},
+{
+  "directory": "C:/Development/fg-os/build/kernel",
+  "command": "C:\\msys64\\mingw64\\bin\\gcc.exe  @CMakeFiles/phase5-demo.dir/includes_C.rsp -ffreestanding -fno-stack-protector -fno-builtin -mno-red-zone -mno-mmx -mno-sse -mno-sse2 -Wall -Wextra -O2 -std=gnu17 -o CMakeFiles\\phase5-demo.dir\\src\\test_main.c.obj -c C:\\Development\\fg-os\\kernel\\src\\test_main.c",
+  "file": "C:/Development/fg-os/kernel/src/test_main.c",
+  "output": "kernel/CMakeFiles/phase5-demo.dir/src/test_main.c.obj"
+}
+]
